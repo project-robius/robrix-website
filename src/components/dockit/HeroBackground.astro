@@ -1,0 +1,74 @@
+---
+// Hero Background component with dynamic height calculation
+---
+
+<div class="hero-bg-wrapper">
+	<div class="hero-bg">
+		<img
+			src="/images/hero-bg-light.png"
+			alt="Hero Background"
+			class="dark:hidden"
+			loading="eager"
+			fetchpriority="high"
+		/>
+		<img
+			src="/images/hero-bg-dark.png"
+			alt="Hero Background"
+			class="hidden dark:block"
+			loading="eager"
+			fetchpriority="high"
+		/>
+	</div>
+</div>
+
+<style>
+	.hero-bg-wrapper {
+		position: relative;
+		width: 100%;
+		height: 0;
+		pointer-events: none;
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: -10;
+		overflow: hidden;
+	}
+
+	.hero-bg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+	}
+</style>
+
+<script>
+	// Dynamically adjust hero background height based on hero section
+	function adjustHeroBackgroundHeight() {
+		const heroBG = document.querySelector('.hero-bg') as HTMLElement;
+		const heroSection = document.querySelector('[data-hero-section]') as HTMLElement;
+
+		if (heroBG && heroSection) {
+			// Calculate height including padding and a bit extra for visual appeal
+			const totalHeight = heroSection.offsetHeight + 100;
+			heroBG.style.height = `${totalHeight}px`;
+		}
+	}
+
+	// Run on load and resize
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', adjustHeroBackgroundHeight);
+	} else {
+		adjustHeroBackgroundHeight();
+	}
+
+	window.addEventListener('resize', adjustHeroBackgroundHeight);
+
+	// Re-adjust after images load
+	window.addEventListener('load', adjustHeroBackgroundHeight);
+</script>

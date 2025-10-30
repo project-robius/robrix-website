@@ -41,6 +41,21 @@ const { language, textDirection } = I18N;
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
+    <!-- Hero Background -->
+    <div class="hero-bg">
+      <img
+        src="/images/hero-bg-light.png"
+        alt="Hero Background"
+        class="dark:hidden"
+        loading="eager"
+      />
+      <img
+        src="/images/hero-bg-dark.png"
+        alt="Hero Background"
+        class="hidden dark:block"
+        loading="eager"
+      />
+    </div>
     <slot />
 
     <BasicScripts />

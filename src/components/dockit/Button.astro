@@ -1,0 +1,63 @@
+---
+interface Props {
+	label: string;
+	link: string;
+	variant?: 'primary' | 'outline';
+	target?: string;
+}
+
+const { label, link, variant = 'primary', target } = Astro.props;
+---
+
+<a href={link} class={`dockit-btn dockit-btn-${variant}`} target={target}>{label}</a>
+
+<style>
+	.dockit-btn {
+		display: inline-block;
+		text-decoration: none;
+		padding: 0.75rem 1.25rem;
+		font-weight: 500;
+		text-transform: capitalize;
+		transition: all 0.3s ease;
+		border-radius: 0.75rem;
+	}
+
+	.dockit-btn-primary {
+		background: linear-gradient(35.65deg, #3a1c71 -10.94%, #d76d77 61.04%, #ffca7b 133.01%);
+		color: white;
+	}
+
+	.dockit-btn-primary:hover {
+		filter: brightness(1.05);
+	}
+
+	.dockit-btn-outline {
+		position: relative;
+		padding: 0.75rem 1.5rem;
+		border: none;
+		color: var(--sl-color-white, #f6f6f6);
+	}
+
+	:global([data-theme='light']) .dockit-btn-outline {
+		color: #181818;
+	}
+
+	.dockit-btn-outline:hover {
+		background: linear-gradient(35.65deg, #3a1c71 -10.94%, #d76d77 61.04%, #ffca7b 133.01%);
+		color: #fff !important;
+	}
+
+	.dockit-btn-outline::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		padding: 2px;
+		background: linear-gradient(35.65deg, #3a1c71 -10.94%, #d76d77 61.04%, #ffca7b 133.01%);
+		border-radius: inherit;
+		mask:
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0);
+		mask-composite: xor;
+		-webkit-mask-composite: xor;
+	}
+</style>

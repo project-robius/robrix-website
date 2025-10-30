@@ -1,0 +1,134 @@
+---
+interface Props {
+	question: string;
+	answer: string;
+	open?: boolean;
+}
+
+const { question, answer, open = false } = Astro.props;
+---
+
+<div class={`dockit-accordion ${open ? 'active' : ''}`}>
+	<div class="dockit-accordion-header">
+		<h4>{question}</h4>
+		<div class="dockit-accordion-icon">
+			<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					class="vertical-line"
+					fill-rule="evenodd"
+					clip-rule="evenodd"
+					d="M8.47821 6.52114V0H6.52169V6.52114H0V8.47766H6.52169V15H8.47821V8.47766H15V6.52114H8.47821Z"
+					fill="currentColor"
+				/>
+				<path
+					class="horizontal-line"
+					fill-rule="evenodd"
+					clip-rule="evenodd"
+					d="M0 6.52114V8.47766H15V6.52114H0Z"
+					fill="currentColor"
+				/>
+			</svg>
+		</div>
+	</div>
+	<div class="dockit-accordion-body" set:html={answer} />
+</div>
+
+<style>
+	.dockit-accordion {
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 1.5rem 2rem;
+		border-radius: 16px;
+		margin-top: 1rem;
+		background: rgba(21, 21, 21, 0.5);
+	}
+
+	:global([data-theme='light']) .dockit-accordion {
+		background: rgba(247, 247, 247, 0.5);
+		border-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.dockit-accordion-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+
+	.dockit-accordion-header h4 {
+		font-size: 1.22rem;
+		margin: 0;
+		color: var(--sl-color-white, #f6f6f6);
+	}
+
+	:global([data-theme='light']) .dockit-accordion-header h4 {
+		color: #181818;
+	}
+
+	.dockit-accordion-icon {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.dockit-accordion-icon svg {
+		position: relative;
+	}
+
+	.dockit-accordion-icon .vertical-line {
+		transition:
+			transform 0.5s ease,
+			opacity 0.5s ease;
+		transform-origin: center;
+	}
+
+	.dockit-accordion-icon .horizontal-line {
+		position: absolute;
+		transition: transform 0.5s ease;
+		transform-origin: center;
+	}
+
+	.dockit-accordion.active .dockit-accordion-icon .vertical-line {
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+
+	.dockit-accordion.active .dockit-accordion-icon .horizontal-line {
+		transform: rotate(180deg);
+	}
+
+	.dockit-accordion-body {
+		margin-top: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.5s ease;
+		opacity: 0;
+		color: #999999;
+	}
+
+	:global([data-theme='light']) .dockit-accordion-body {
+		color: #000;
+	}
+
+	.dockit-accordion.active .dockit-accordion-body {
+		margin-top: 16px;
+		max-height: 500px;
+		overflow: visible;
+		opacity: 1;
+		transition: all 0.5s ease;
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const accordions = document.querySelectorAll('.dockit-accordion');
+		accordions.forEach((accordion) => {
+			const header = accordion.querySelector('.dockit-accordion-header');
+			header?.addEventListener('click', () => {
+				accordion.classList.toggle('active');
+			});
+		});
+	});
+</script>

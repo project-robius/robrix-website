@@ -1,52 +1,82 @@
-# 🚀 AstroWind
+# Robrix Website
 
-<img src="https://raw.githubusercontent.com/arthelokyo/.github/main/resources/astrowind/lighthouse-score.png" align="right"
-     alt="AstroWind Lighthouse Score" width="100" height="358">
+Official project website for [Robrix](https://github.com/project-robius/robrix), a multi-platform Matrix chat client built with Rust and Makepad.
 
-🌟 _Most *starred* & *forked* Astro theme in 2022, 2023 & 2024_. 🌟
+## About
 
-**AstroWind** is a free and open-source template to make your website using **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
+This website showcases Robrix, a Matrix messaging client that demonstrates the power of cross-platform development with Rust and the Makepad UI framework. The site provides information about features, supported platforms, and how to get started with Robrix.
 
-- ✅ **Production-ready** scores in **PageSpeed Insights** reports.
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
-- ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
-- ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
-- ✅ Generation of **project sitemap** based on your routes.
-- ✅ **Open Graph tags** for social media sharing.
-- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
+**Built with:**
+- [Astro 5.0](https://astro.build/) - Static site generator
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [AstroWind](https://github.com/onwidget/astrowind) - Base template
 
-<br>
+## Features
 
-![AstroWind Theme Screenshot](https://raw.githubusercontent.com/arthelokyo/.github/main/resources/astrowind/screenshot-astrowind-1.0.png)
+- ✅ Responsive design with dark mode support
+- ✅ Fast and SEO-friendly
+- ✅ Production-ready performance
+- ✅ Open Graph tags for social sharing
+- ✅ Optimized for accessibility
 
-[![arthelokyo](https://custom-icon-badges.demolab.com/badge/made%20by%20-arthelokyo-556bf2?style=flat-square&logo=arthelokyo&logoColor=white&labelColor=101827)](https://github.com/arthelokyo)
-[![License](https://img.shields.io/github/license/arthelokyo/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/arthelokyo/astrowind/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/arthelokyo)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/arthelokyo/astrowind#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/arthelokyo/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/arthelokyo/astrowind)
-[![Stars](https://img.shields.io/github/stars/arthelokyo/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/arthelokyo/astrowind)
-[![Forks](https://img.shields.io/github/forks/arthelokyo/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/arthelokyo/astrowind)
+## Getting Started
 
-<br>
+### Prerequisites
 
-<details open>
-<summary>Table of Contents</summary>
+- Node.js 18+ and npm
 
-- [Demo](#demo)
-- [Upcoming: AstroWind 2.0 – We Need Your Vision!](#-upcoming-astrowind-20--we-need-your-vision)
-- [TL;DR](#tldr)
-- [Getting started](#getting-started)
-  - [Project structure](#project-structure)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Deploy](#deploy)
-- [Frequently Asked Questions](#frequently-asked-questions)
-- [Related Projects](#related-projects)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
+### Installation
 
-</details>
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Project Structure
+
+```
+/
+├── public/          # Static assets
+├── src/
+│   ├── assets/      # Images and styles
+│   ├── components/  # Reusable UI components
+│   ├── content/     # Markdown/MDX content
+│   ├── layouts/     # Page layouts
+│   ├── pages/       # Route pages
+│   └── config.yaml  # Site configuration
+└── package.json
+```
+
+## Configuration
+
+Edit `src/config.yaml` to customize site metadata and settings.
+
+## Deployment
+
+The site can be deployed to any static hosting service (Vercel, Netlify, Cloudflare Pages, GitHub Pages, etc.).
+
+```bash
+npm run build
+# Upload the dist/ folder to your hosting provider
+```
+
+## About Robrix
+
+Robrix is part of [Project Robius](https://github.com/project-robius), an initiative to advance cross-platform application development with Rust.
+
+## License
+
+This website is based on the AstroWind template, which is licensed under MIT.
+Robrix project content is also under MIT License.
 
 <br>
 
