@@ -17,6 +17,8 @@ import Grid from '~/components/dockit/Grid.astro';
 import Card from '~/components/dockit/Card.astro';
 import Accordion from '~/components/dockit/Accordion.astro';
 import Button from '~/components/dockit/Button.astro';
+import Tabs from '~/components/dockit/Tabs.astro';
+import TabItem from '~/components/dockit/TabItem.astro';
 
 const metadata = {
   title: 'Robrix — Multi-platform Matrix Chat Client Built with Rust',
@@ -63,16 +65,17 @@ const metadata = {
 
   <!-- Technology Section ************ -->
 
-  <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
-    <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-      <p class="text-base text-primary font-semibold tracking-wide uppercase">Technology Stack</p>
-      <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-        Powered by cutting-edge tools
-      </h2>
-      <p class="max-w-3xl mx-auto text-xl text-muted">
-        Robrix leverages the best open-source technologies for maximum performance and security
-      </p>
-    </div>
+  <section class="dockit-section">
+    <div class="dockit-container">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <p class="text-base font-semibold tracking-wide uppercase" style="color: var(--dockit-primary);">Technology Stack</p>
+        <h2 class="section-title mb-4">
+          Powered by cutting-edge tools
+        </h2>
+        <p class="section-description max-w-3xl mx-auto">
+          Robrix leverages the best open-source technologies for maximum performance and security
+        </p>
+      </div>
     <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
       <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
         <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-4">
@@ -104,7 +107,7 @@ const metadata = {
         <p class="text-muted">Native cross-platform UI framework</p>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Features Section with Dockit Cards ************** -->
 
@@ -121,27 +124,27 @@ const metadata = {
       </div>
 
       <Grid columns={3}>
-        <Card icon="tabler:shield-lock" title="End-to-End Encryption">
+        <Card icon="tabler:shield-lock" title="End-to-End Encryption" iconColor="#7BE1A4">
           Your messages are secured with Matrix's proven E2EE protocol. Device verification ensures only you can read your messages.
         </Card>
 
-        <Card icon="tabler:refresh" title="Real-time Sync">
+        <Card icon="tabler:refresh" title="Real-time Sync" iconColor="#979BFF">
           Instant message delivery and synchronization across all your devices using Matrix Sliding Sync.
         </Card>
 
-        <Card icon="tabler:photo" title="Rich Media">
+        <Card icon="tabler:photo" title="Rich Media" iconColor="#FFD97B">
           Share images, videos, files, and formatted text. Link previews make conversations more engaging.
         </Card>
 
-        <Card icon="tabler:cloud-off" title="Offline Support">
+        <Card icon="tabler:cloud-off" title="Offline Support" iconColor="#FF8585">
           Access your message history offline. Everything syncs automatically when you reconnect.
         </Card>
 
-        <Card icon="tabler:rocket" title="Native Performance">
+        <Card icon="tabler:rocket" title="Native Performance" iconColor="#D76D77">
           Built with Rust for blazing fast performance and minimal resource usage on every platform.
         </Card>
 
-        <Card icon="tabler:code" title="Open Source">
+        <Card icon="tabler:code" title="Open Source" iconColor="#7BBAFF">
           Fully transparent, auditable code. Contribute to the project or fork it for your own needs.
         </Card>
       </Grid>
@@ -175,10 +178,10 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-2">
-        One app. <span class="text-primary">Every device.</span>
+      <h2 class="section-title mb-4">
+        One app. <span class="text-muted">Every device.</span>
       </h2>
-      <p class="text-lg text-muted">
+      <p class="section-description">
         Experience true cross-platform messaging without sacrificing performance or user experience.
       </p>
     </Fragment>
@@ -188,29 +191,105 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps2 Widget ***************** -->
+  <!-- Getting Started with Tabs ***************** -->
 
-  <Steps2
-    title="Getting started is easy"
-    subtitle="From clone to chat in minutes"
-    items={[
-      {
-        title: 'Install Rust',
-        description: 'Download and install Rust toolchain from rust-lang.org. Robrix requires Rust 1.70 or later.',
-        icon: 'tabler:brand-rust',
-      },
-      {
-        title: 'Clone Repository',
-        description: 'Clone the Robrix repository and install platform-specific dependencies for your target OS.',
-        icon: 'tabler:git-branch',
-      },
-      {
-        title: 'Build & Run',
-        description: 'Use cargo-makepad to build for your platform. Launch the app and sign in with your Matrix account.',
-        icon: 'tabler:player-play',
-      },
-    ]}
-  />
+  <section class="dockit-section">
+    <div class="dockit-container">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <h2 class="section-title mb-4">
+          Get started quickly <span class="text-muted">in just 3 simple steps</span>
+        </h2>
+        <p class="section-description max-w-3xl mx-auto">
+          From clone to chat in minutes
+        </p>
+      </div>
+
+      <Tabs>
+        <TabItem
+          title="Install Rust"
+          subtitle="Download and install Rust toolchain from rust-lang.org"
+          number={1}
+          icon="🦀"
+        >
+          <div class="prose prose-invert max-w-none">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--sl-color-white)">Step 1: Install Rust</h3>
+            <p class="text-lg mb-4" style="color: #999999">
+              Robrix requires <strong>Rust 1.70 or later</strong>. Visit <a href="https://www.rust-lang.org/" target="_blank" class="text-dockit-primary hover:underline">rust-lang.org</a> to download and install the latest version.
+            </p>
+            <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800">
+              <code class="text-sm text-gray-300">
+                curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+              </code>
+            </div>
+            <p class="mt-4 text-sm" style="color: #999999">
+              After installation, verify your Rust version:
+            </p>
+            <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 mt-2">
+              <code class="text-sm text-gray-300">
+                rustc --version
+              </code>
+            </div>
+          </div>
+        </TabItem>
+
+        <TabItem
+          title="Clone Repository"
+          subtitle="Clone the Robrix repository and install dependencies"
+          number={2}
+          icon="📦"
+        >
+          <div class="prose prose-invert max-w-none">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--sl-color-white)">Step 2: Clone Repository</h3>
+            <p class="text-lg mb-4" style="color: #999999">
+              Clone the <a href="https://github.com/project-robius/robrix" target="_blank" class="text-dockit-primary hover:underline">Robrix repository</a> from GitHub and install platform-specific dependencies.
+            </p>
+            <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800">
+              <code class="text-sm text-gray-300">
+                git clone https://github.com/project-robius/robrix.git<br />
+                cd robrix
+              </code>
+            </div>
+            <p class="mt-4 text-sm" style="color: #999999">
+              Install platform dependencies (varies by OS):
+            </p>
+            <ul class="mt-2 space-y-2" style="color: #999999">
+              <li><strong>macOS:</strong> Xcode Command Line Tools</li>
+              <li><strong>Linux:</strong> Build essentials, OpenSSL, and required libraries</li>
+              <li><strong>Windows:</strong> Visual Studio Build Tools</li>
+            </ul>
+          </div>
+        </TabItem>
+
+        <TabItem
+          title="Build & Run"
+          subtitle="Use cargo-makepad to build and launch the app"
+          number={3}
+          icon="🚀"
+        >
+          <div class="prose prose-invert max-w-none">
+            <h3 class="text-2xl font-bold mb-4" style="color: var(--sl-color-white)">Step 3: Build & Run</h3>
+            <p class="text-lg mb-4" style="color: #999999">
+              Use <strong>cargo-makepad</strong> to build Robrix for your platform. Then launch the app and sign in with your Matrix account.
+            </p>
+            <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800">
+              <code class="text-sm text-gray-300">
+                cargo install cargo-makepad<br />
+                cargo makepad run
+              </code>
+            </div>
+            <p class="mt-4 text-sm" style="color: #999999">
+              On first launch, you'll be prompted to:
+            </p>
+            <ul class="mt-2 space-y-2" style="color: #999999">
+              <li>✓ Enter your Matrix homeserver URL (e.g., matrix.org)</li>
+              <li>✓ Sign in with your username and password</li>
+              <li>✓ Verify your device for end-to-end encryption</li>
+            </ul>
+          </div>
+        </TabItem>
+      </Tabs>
+    </div>
+  </section>
 
   <!-- Testimonials Widget *********** -->
 

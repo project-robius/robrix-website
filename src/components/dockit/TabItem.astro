@@ -1,0 +1,37 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	number: number;
+	icon?: string;
+}
+
+const { title, subtitle, number, icon } = Astro.props;
+---
+
+<div class="dockit-tab-item">
+	<div class="dockit-tab-nav">
+		<button class="tab-button" data-tab={number}>
+			<span class="tab-number">{number}</span>
+			<div class="tab-content">
+				<h3 class="tab-title">
+					{icon && <span class="tab-icon">{icon}</span>}
+					{title}
+				</h3>
+				<p class="tab-subtitle">{subtitle}</p>
+			</div>
+		</button>
+	</div>
+
+	<div class="dockit-tab-content" data-panel={number}>
+		<div class="tab-text-content">
+			<slot />
+		</div>
+	</div>
+</div>
+
+<style>
+	.tab-icon {
+		margin-right: 0.5rem;
+	}
+</style>

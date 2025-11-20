@@ -39,6 +39,7 @@
 	line-height: 1;
 	letter-spacing: -0.05em;
 	font-weight: 700;
+	font-family: var(--aw-font-heading, 'Space Grotesk', sans-serif);
 	color: var(--sl-color-white);
 }
 
