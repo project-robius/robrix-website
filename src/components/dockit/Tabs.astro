@@ -37,7 +37,7 @@
 		min-height: 400px;
 	}
 
-	:global([data-theme='light']) .dockit-tabs-content {
+	:global(:not(.dark)) .dockit-tabs-content {
 		background-color: rgba(247, 247, 247, 0.5);
 		border-color: rgba(0, 0, 0, 0.1);
 	}
@@ -104,7 +104,7 @@
 					align-items: center;
 				}
 
-				:global([data-theme='light']) .dockit-tabs-nav .tab-button {
+				:global(:not(.dark)) .dockit-tabs-nav .tab-button {
 					color: #181818;
 				}
 
@@ -112,7 +112,7 @@
 					background: rgba(255, 255, 255, 0.05);
 				}
 
-				:global([data-theme='light']) .dockit-tabs-nav .tab-button:hover {
+				:global(:not(.dark)) .dockit-tabs-nav .tab-button:hover {
 					background: rgba(0, 0, 0, 0.05);
 				}
 
@@ -159,7 +159,7 @@
 					margin: 0;
 					line-height: 1.4;
 					transition: all 0.3s ease;
-					color: #999999;
+					color: var(--aw-color-text-muted);
 				}
 
 				.dockit-tabs-content .dockit-tab-content {

@@ -42,7 +42,7 @@ const { question, answer, open = false } = Astro.props;
 		background: rgba(21, 21, 21, 0.5);
 	}
 
-	:global([data-theme='light']) .dockit-accordion {
+	:global(:not(.dark)) .dockit-accordion {
 		background: rgba(247, 247, 247, 0.5);
 		border-color: rgba(0, 0, 0, 0.1);
 	}
@@ -60,7 +60,7 @@ const { question, answer, open = false } = Astro.props;
 		color: var(--sl-color-white, #f6f6f6);
 	}
 
-	:global([data-theme='light']) .dockit-accordion-header h4 {
+	:global(:not(.dark)) .dockit-accordion-header h4 {
 		color: #181818;
 	}
 
@@ -105,11 +105,11 @@ const { question, answer, open = false } = Astro.props;
 		overflow: hidden;
 		transition: all 0.5s ease;
 		opacity: 0;
-		color: #999999;
+		color: var(--aw-color-text-muted);
 	}
 
-	:global([data-theme='light']) .dockit-accordion-body {
-		color: #000;
+	:global(:not(.dark)) .dockit-accordion-body {
+		color: var(--aw-color-text-default);
 	}
 
 	.dockit-accordion.active .dockit-accordion-body {

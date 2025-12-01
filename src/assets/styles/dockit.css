@@ -8,7 +8,7 @@
 	--dockit-gradient: linear-gradient(35.65deg, #3a1c71 -10.94%, #d76d77 61.04%, #ffca7b 133.01%);
 }
 
-[data-theme='light'] {
+:root:not(.dark) {
 	--sl-color-white: #181818;
 	--sl-color-gray-6: #eeeeee;
 }
@@ -81,7 +81,7 @@
 	backdrop-filter: blur(10px);
 }
 
-[data-theme='light'] .glass-effect {
+:root:not(.dark) .glass-effect {
 	background: rgba(247, 247, 247, 0.5);
 	border-color: rgba(0, 0, 0, 0.1);
 }
