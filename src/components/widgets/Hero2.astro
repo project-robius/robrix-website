@@ -29,13 +29,13 @@ const {
     </slot>
   </div>
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20 lg:flex lg:items-center lg:h-screen lg:justify-center">
-      <div class="text-center pb-10 md:pb-16 mx-auto max-w-4xl">
+    <div class="pt-0 md:pt-[76px] lg:pt-0 pointer-events-none"></div>
+    <div class="py-12 md:py-20 lg:flex lg:items-center lg:h-[calc(100vh-76px)] lg:justify-center lg:py-0 lg:mt-[76px]">
+      <div class="text-center md:pb-16 mx-auto max-w-4xl lg:pb-0">
         {
           tagline && (
             <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+              class="text-base text-secondar pb-5 dark:text-blue-200 font-bold tracking-wide uppercase intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
               set:html={tagline}
             />
           )
@@ -43,7 +43,7 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+              class="pb-5 text-5xl md:text-6xl font-bold leading-tighter mb-4 font-heading dark:text-gray-200 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
               set:html={title}
             />
           )
@@ -51,7 +51,7 @@ const {
         {
           subtitle && (
             <p
-              class="text-xl text-muted mb-6 dark:text-slate-300 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
+              class="text-xl text-muted pb-5 mb-6 dark:text-slate-300 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
               set:html={subtitle}
             />
           )
