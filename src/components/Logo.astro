@@ -1,11 +1,14 @@
 ---
 import { SITE } from 'astrowind:config';
+import { Image } from 'astro:assets';
+import logoImage from '~/assets/images/robrix_logo_alpha.png';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold whitespace-nowrap"
->
-  <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-    {SITE?.name.toUpperCase()}
+<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 flex items-center gap-2">
+  <Image src={logoImage} alt="Robrix Logo" class="h-8 w-8 md:h-7 md:w-7" width={32} height={32} />
+  <span class="text-2xl md:text-xl font-bold whitespace-nowrap">
+    <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+      {SITE?.name.toUpperCase()}
+    </span>
   </span>
 </span>

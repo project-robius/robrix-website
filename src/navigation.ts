@@ -7,16 +7,12 @@ export const headerData = {
       href: getPermalink('/#features'),
     },
     {
-      text: 'Platforms',
-      href: getPermalink('/#platforms'),
-    },
-    {
       text: 'Documentation',
       href: 'https://github.com/project-robius/robrix#readme',
       target: '_blank',
     },
   ],
-  actions: [{ text: 'GitHub', href: 'https://github.com/project-robius/robrix', target: '_blank' }],
+  actions: [{ variant: 'primary', text: 'GitHub', href: 'https://github.com/project-robius/robrix', icon: 'tabler:brand-github', target: '_blank' }],
 };
 
 export const footerData = {
@@ -25,18 +21,8 @@ export const footerData = {
       title: 'Project',
       links: [
         { text: 'Features', href: getPermalink('/#features') },
-        { text: 'Platforms', href: getPermalink('/#platforms') },
         { text: 'GitHub', href: 'https://github.com/project-robius/robrix' },
         { text: 'Releases', href: 'https://github.com/project-robius/robrix/releases' },
-      ],
-    },
-    {
-      title: 'Documentation',
-      links: [
-        { text: 'README', href: 'https://github.com/project-robius/robrix#readme' },
-        { text: 'Building Guide', href: 'https://github.com/project-robius/robrix#building-robrix' },
-        { text: 'Contributing', href: 'https://github.com/project-robius/robrix/blob/main/CONTRIBUTING.md' },
-        { text: 'Issues', href: 'https://github.com/project-robius/robrix/issues' },
       ],
     },
     {
@@ -44,15 +30,12 @@ export const footerData = {
       links: [
         { text: 'Matrix Chat', href: 'https://matrix.to/#/#robius:matrix.org' },
         { text: 'Project Robius', href: 'https://github.com/project-robius' },
-        { text: 'Makepad', href: 'https://github.com/makepad/makepad' },
-        { text: 'Matrix.org', href: 'https://matrix.org' },
       ],
     },
     {
       title: 'Resources',
       links: [
-        { text: 'Rust Lang', href: 'https://www.rust-lang.org' },
-        { text: 'Matrix SDK', href: 'https://github.com/matrix-org/matrix-rust-sdk' },
+        { text: 'Documentation', href: 'https://github.com/project-robius/robrix#readme' },
         { text: 'License (MIT)', href: 'https://github.com/project-robius/robrix/blob/main/LICENSE' },
       ],
     },
