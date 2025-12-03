@@ -43,7 +43,7 @@ const metadata = {
   >
     <Fragment slot="title">
       ROBRIX<br />
-      Decentralized messaging<br />
+      Secure decentralized messaging<br />
       <span class="text-accent">across every platform</span>
     </Fragment>
 
@@ -63,355 +63,469 @@ const metadata = {
       { title: 'Native Performance', amount: 'Always' },
       { title: 'License', amount: 'MIT' },
     ]}
-  />
+    >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-200/50 dark:bg-slate-800/50 backdrop-blur-sm"></div>
+    </Fragment>
+  </Stats>
 
-  <!-- Technology Section ************ -->
+<!-- Technology Section ************ -->
 
-  <section class="dockit-section">
+<section id="technology" class="dockit-section">
+  <div class="dockit-container">
+    <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+      <p class="text-base font-semibold tracking-wide uppercase" style="color: var(--dockit-primary);">
+        Technology Stack
+      </p>
+      <h2 class="section-title mb-4">Powered by cutting-edge tools</h2>
+      <p class="section-description max-w-3xl mx-auto">
+        Robrix leverages the best open-source technologies for maximum performance and security
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div
+        class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-4">
+          <svg class="w-10 h-10 text-orange-600 dark:text-orange-400" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.834 8.101a13.912 13.912 0 0 1-13.643 11.72a10.105 10.105 0 0 1-1.994-.12a6.111 6.111 0 0 1-5.082-5.761a5.934 5.934 0 0 1 11.867-.084c.025.983-.401 1.846-1.277 1.871c-.936 0-1.374-.668-1.374-1.567v-2.5a1.531 1.531 0 0 0-1.52-1.533H8.715a3.648 3.648 0 1 0 2.695 6.08l.073-.11l.074.121a2.58 2.58 0 0 0 2.2 1.048a2.909 2.909 0 0 0 2.695-3.04a7.912 7.912 0 0 0-.217-1.933a7.404 7.404 0 0 0-14.64 1.603a7.497 7.497 0 0 0 7.308 7.405s.549.05 1.167.035a15.803 15.803 0 0 0 8.475-2.528c.036-.025.072.025.048.061a12.44 12.44 0 0 1-9.69 3.963a8.744 8.744 0 0 1-8.9-8.972a9.049 9.049 0 0 1 3.635-7.247a8.863 8.863 0 0 1 5.229-1.726h2.813a7.915 7.915 0 0 0 5.839-2.578a.11.11 0 0 1 .059-.034a.112.112 0 0 1 .12.053a.113.113 0 0 1 .015.067a7.934 7.934 0 0 1-1.227 3.549a.107.107 0 0 0-.014.06a.11.11 0 0 0 .073.095a.109.109 0 0 0 .062.004a8.505 8.505 0 0 0 5.913-4.876a.155.155 0 0 1 .055-.053a.15.15 0 0 1 .147 0a.153.153 0 0 1 .054.053A10.779 10.779 0 0 1 23.834 8.1zM8.895 11.628a2.188 2.188 0 1 0 2.188 2.188v-2.042a.158.158 0 0 0-.15-.15Z"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Rust Language</h3>
+        <p class="text-muted">Memory-safe, blazingly fast systems programming</p>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div class="w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
+          <svg class="w-10 h-10 text-purple-600 dark:text-purple-400" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Matrix Protocol</h3>
+        <p class="text-muted">Decentralized, secure real-time communication</p>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div class="w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-4">
+          <svg class="w-10 h-10 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Makepad UI</h3>
+        <p class="text-muted">Native cross-platform UI framework</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section with Dockit Cards ************** -->
+
+<section id="features" class="dockit-section relative">
+    <div class="absolute inset-0 bg-gray-200/50 dark:bg-slate-800/50 backdrop-blur-sm -z-10"></div>
     <div class="dockit-container">
       <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
         <p class="text-base font-semibold tracking-wide uppercase" style="color: var(--dockit-primary);">
-          Technology Stack
+          Core Features
         </p>
-        <h2 class="section-title mb-4">Powered by cutting-edge tools</h2>
+        <h2 class="section-title mb-4">Everything you need for modern messaging</h2>
         <p class="section-description max-w-3xl mx-auto">
-          Robrix leverages the best open-source technologies for maximum performance and security
+          Robrix combines the security of Matrix with the performance of Rust
         </p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div
-          class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-4">
-            <svg class="w-10 h-10 text-orange-600 dark:text-orange-400" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M23.834 8.101a13.912 13.912 0 0 1-13.643 11.72a10.105 10.105 0 0 1-1.994-.12a6.111 6.111 0 0 1-5.082-5.761a5.934 5.934 0 0 1 11.867-.084c.025.983-.401 1.846-1.277 1.871c-.936 0-1.374-.668-1.374-1.567v-2.5a1.531 1.531 0 0 0-1.52-1.533H8.715a3.648 3.648 0 1 0 2.695 6.08l.073-.11l.074.121a2.58 2.58 0 0 0 2.2 1.048a2.909 2.909 0 0 0 2.695-3.04a7.912 7.912 0 0 0-.217-1.933a7.404 7.404 0 0 0-14.64 1.603a7.497 7.497 0 0 0 7.308 7.405s.549.05 1.167.035a15.803 15.803 0 0 0 8.475-2.528c.036-.025.072.025.048.061a12.44 12.44 0 0 1-9.69 3.963a8.744 8.744 0 0 1-8.9-8.972a9.049 9.049 0 0 1 3.635-7.247a8.863 8.863 0 0 1 5.229-1.726h2.813a7.915 7.915 0 0 0 5.839-2.578a.11.11 0 0 1 .059-.034a.112.112 0 0 1 .12.053a.113.113 0 0 1 .015.067a7.934 7.934 0 0 1-1.227 3.549a.107.107 0 0 0-.014.06a.11.11 0 0 0 .073.095a.109.109 0 0 0 .062.004a8.505 8.505 0 0 0 5.913-4.876a.155.155 0 0 1 .055-.053a.15.15 0 0 1 .147 0a.153.153 0 0 1 .054.053A10.779 10.779 0 0 1 23.834 8.1zM8.895 11.628a2.188 2.188 0 1 0 2.188 2.188v-2.042a.158.158 0 0 0-.15-.15Z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Rust Language</h3>
-          <p class="text-muted">Memory-safe, blazingly fast systems programming</p>
-        </div>
 
-        <div
-          class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <div class="w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
-            <svg class="w-10 h-10 text-purple-600 dark:text-purple-400" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 0 0-.18-.66 1.106 1.106 0 0 0-.438-.448c-.194-.11-.457-.166-.785-.166-.332 0-.6.064-.803.189a1.38 1.38 0 0 0-.48.499 1.946 1.946 0 0 0-.231.696 5.56 5.56 0 0 0-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 0 0-.143-.688 1.052 1.052 0 0 0-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.337-.439.595-.12.259-.18.6-.18 1.02v4.966H5.46V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Matrix Protocol</h3>
-          <p class="text-muted">Decentralized, secure real-time communication</p>
-        </div>
+      <Grid columns={3}>
+        <Card icon="tabler:shield-lock" title="End-to-End Encryption" iconColor="#7BE1A4">
+          Your messages are secured with Matrix's proven E2EE protocol. Device verification ensures only you can read
+          your messages.
+        </Card>
 
-        <div
-          class="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <div class="w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-4">
-            <svg
-              class="w-10 h-10 text-blue-600 dark:text-blue-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Makepad UI</h3>
-          <p class="text-muted">Native cross-platform UI framework</p>
-        </div>
-      </div>
+        <Card icon="tabler:refresh" title="Real-time Sync" iconColor="#979BFF">
+          Instant message delivery and synchronization across all your devices using Matrix Sliding Sync.
+        </Card>
+
+        <Card icon="tabler:photo" title="Rich Media" iconColor="#FFD97B">
+          Share images, videos, files, and formatted text. Link previews make conversations more engaging.
+        </Card>
+
+        <Card icon="tabler:cloud-off" title="Offline Support" iconColor="#FF8585">
+          Access your message history offline. Everything syncs automatically when you reconnect.
+        </Card>
+
+        <Card icon="tabler:rocket" title="Native Performance" iconColor="#D76D77">
+          Built with Rust for blazing fast performance and minimal resource usage on every platform.
+        </Card>
+
+        <Card icon="tabler:code" title="Open Source" iconColor="#7BBAFF">
+          Fully transparent, auditable code. Contribute to the project or fork it for your own needs.
+        </Card>
+      </Grid>
     </div>
+  </section>
 
-    <!-- Features Section with Dockit Cards ************** -->
+  <!-- Content Widget **************** -->
 
-    <section id="features" class="dockit-section">
-      <div class="dockit-container">
-        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-          <p class="text-base font-semibold tracking-wide uppercase" style="color: var(--dockit-primary);">
-            Core Features
-          </p>
-          <h2 class="section-title mb-4">Everything you need for modern messaging</h2>
-          <p class="section-description max-w-3xl mx-auto">
-            Robrix combines the security of Matrix with the performance of Rust
-          </p>
-        </div>
+  <Content
+    isReversed
+    items={[
+      {
+        title: '7+ Platforms',
+        description: 'macOS, Linux, Windows, Android, iOS, iPadOS, and OpenHarmony — all from a single Rust codebase.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Makepad UI',
+        description: 'Revolutionary UI framework that compiles to native code, delivering consistent UX everywhere.',
+        icon: 'tabler:app-window',
+      },
+      {
+        title: 'Matrix Protocol',
+        description:
+          'Decentralized, open standard for secure, real-time communication. Connect with anyone on the Matrix network.',
+        icon: 'tabler:network',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80',
+      alt: 'Team collaboration',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="section-title mb-4">
+        One app. <span class="text-muted">Every device.</span>
+      </h2>
+      <p class="section-description">
+        Experience true cross-platform messaging without sacrificing performance or user experience.
+      </p>
+    </Fragment>
 
-        <Grid columns={3}>
-          <Card icon="tabler:shield-lock" title="End-to-End Encryption" iconColor="#7BE1A4">
-            Your messages are secured with Matrix's proven E2EE protocol. Device verification ensures only you can read
-            your messages.
-          </Card>
-
-          <Card icon="tabler:refresh" title="Real-time Sync" iconColor="#979BFF">
-            Instant message delivery and synchronization across all your devices using Matrix Sliding Sync.
-          </Card>
-
-          <Card icon="tabler:photo" title="Rich Media" iconColor="#FFD97B">
-            Share images, videos, files, and formatted text. Link previews make conversations more engaging.
-          </Card>
-
-          <Card icon="tabler:cloud-off" title="Offline Support" iconColor="#FF8585">
-            Access your message history offline. Everything syncs automatically when you reconnect.
-          </Card>
-
-          <Card icon="tabler:rocket" title="Native Performance" iconColor="#D76D77">
-            Built with Rust for blazing fast performance and minimal resource usage on every platform.
-          </Card>
-
-          <Card icon="tabler:code" title="Open Source" iconColor="#7BBAFF">
-            Fully transparent, auditable code. Contribute to the project or fork it for your own needs.
-          </Card>
-        </Grid>
-      </div>
-    </section>
-
-    <!-- Content Widget **************** -->
-
-    <Content
-      isReversed
-      items={[
-        {
-          title: '7+ Platforms',
-          description:
-            'macOS, Linux, Windows, Android, iOS, iPadOS, and OpenHarmony — all from a single Rust codebase.',
-          icon: 'tabler:devices',
-        },
-        {
-          title: 'Makepad UI',
-          description: 'Revolutionary UI framework that compiles to native code, delivering consistent UX everywhere.',
-          icon: 'tabler:app-window',
-        },
-        {
-          title: 'Matrix Protocol',
-          description:
-            'Decentralized, open standard for secure, real-time communication. Connect with anyone on the Matrix network.',
-          icon: 'tabler:network',
-        },
-      ]}
-      image={{
-        src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80',
-        alt: 'Team collaboration',
-      }}
-    >
-      <Fragment slot="content">
-        <h2 class="section-title mb-4">
-          One app. <span class="text-muted">Every device.</span>
-        </h2>
-        <p class="section-description">
-          Experience true cross-platform messaging without sacrificing performance or user experience.
-        </p>
-      </Fragment>
-
-      <Fragment slot="bg">
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-purple-50/50 dark:from-orange-950/10 dark:via-transparent dark:to-purple-950/10"
-        >
-        </div>
-      </Fragment>
-    </Content>
-
-    <!-- Getting Started with Tabs ***************** -->
-
-    <section class="dockit-section">
-      <div class="dockit-container">
-        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-          <h2 class="section-title mb-4">
-            Get started quickly <span class="text-muted">in just 3 simple steps</span>
-          </h2>
-          <p class="section-description max-w-3xl mx-auto">From clone to chat in minutes</p>
-        </div>
-
-        <Tabs>
-          <TabItem
-            title="Install Rust"
-            subtitle="Download and install Rust toolchain from rust-lang.org"
-            number={1}
-            icon="🦀"
-          >
-            <div class="prose prose-invert max-w-none">
-              <h3 class="text-2xl font-bold mb-4" style="color: var(--aw-color-text-heading)">Step 1: Install Rust</h3>
-              <p class="text-lg mb-4" style="color: var(--aw-color-text-default)">
-                Robrix requires <strong>Rust 1.70 or later</strong>. Visit <a
-                  href="https://www.rust-lang.org/"
-                  target="_blank"
-                  class="text-dockit-primary hover:underline">rust-lang.org</a
-                > to download and install the latest version.
-              </p>
-              <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800">
-                <code class="text-sm text-gray-300">
-                  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-                </code>
-              </div>
-              <p class="mt-4 text-sm" style="color: var(--aw-color-text-muted)">
-                After installation, verify your Rust version:
-              </p>
-              <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 mt-2">
-                <code class="text-sm text-gray-300"> rustc --version </code>
-              </div>
-            </div>
-          </TabItem>
-
-          <TabItem
-            title="Clone Repository"
-            subtitle="Clone the Robrix repository and install dependencies"
-            number={2}
-            icon="📦"
-          >
-            <div class="prose prose-invert max-w-none">
-              <h3 class="text-2xl font-bold mb-4" style="color: var(--aw-color-text-heading)">
-                Step 2: Clone Repository
-              </h3>
-              <p class="text-lg mb-4" style="color: var(--aw-color-text-default)">
-                Clone the <a
-                  href="https://github.com/project-robius/robrix"
-                  target="_blank"
-                  class="text-dockit-primary hover:underline">Robrix repository</a
-                > from GitHub and install platform-specific dependencies.
-              </p>
-              <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800">
-                <code class="text-sm text-gray-300">
-                  git clone https://github.com/project-robius/robrix.git<br />
-                  cd robrix
-                </code>
-              </div>
-              <p class="mt-4 text-sm" style="color: var(--aw-color-text-muted)">
-                Install platform dependencies (varies by OS):
-              </p>
-              <ul class="mt-2 space-y-2" style="color: var(--aw-color-text-default)">
-                <li><strong>macOS:</strong> Xcode Command Line Tools</li>
-                <li><strong>Linux:</strong> Build essentials, OpenSSL, and required libraries</li>
-                <li><strong>Windows:</strong> Visual Studio Build Tools</li>
-              </ul>
-            </div>
-          </TabItem>
-
-          <TabItem title="Build & Run" subtitle="Use cargo-makepad to build and launch the app" number={3} icon="🚀">
-            <div class="prose prose-invert max-w-none">
-              <h3 class="text-2xl font-bold mb-4" style="color: var(--aw-color-text-heading)">Step 3: Build & Run</h3>
-              <p class="text-lg mb-4" style="color: var(--aw-color-text-default)">
-                Use <strong>cargo-makepad</strong> to build Robrix for your platform. Then launch the app and sign in with
-                your Matrix account.
-              </p>
-              <div class="bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800">
-                <code class="text-sm text-gray-300">
-                  cargo install cargo-makepad<br />
-                  cargo makepad run
-                </code>
-              </div>
-              <p class="mt-4 text-sm" style="color: var(--aw-color-text-muted)">
-                On first launch, you'll be prompted to:
-              </p>
-              <ul class="mt-2 space-y-2" style="color: var(--aw-color-text-default)">
-                <li>✓ Enter your Matrix homeserver URL (e.g., matrix.org)</li>
-                <li>✓ Sign in with your username and password</li>
-                <li>✓ Verify your device for end-to-end encryption</li>
-              </ul>
-            </div>
-          </TabItem>
-        </Tabs>
-      </div>
-    </section>
-
-    <!-- Testimonials Widget *********** -->
-
-    <Testimonials
-      title="What developers are saying"
-      subtitle="Robrix is pushing the boundaries of cross-platform development"
-      testimonials={[
-        {
-          testimonial: `Robrix demonstrates the true potential of Rust for building production-ready cross-platform applications. The Makepad integration is brilliant.`,
-          name: 'Open Source Developer',
-          job: 'Matrix Community',
-          image: {
-            src: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-            alt: 'Developer testimonial',
-          },
-        },
-        {
-          testimonial: `Finally, a Matrix client that feels native on every platform. The performance is exceptional and the codebase is clean.`,
-          name: 'Platform Engineer',
-          job: 'Tech Startup',
-          image: {
-            src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-            alt: 'Engineer testimonial',
-          },
-        },
-        {
-          testimonial: `Project Robius is showing us the future of UI frameworks. Robrix is a fantastic showcase of what's possible.`,
-          name: 'Software Architect',
-          job: 'Enterprise Company',
-          image: {
-            src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-            alt: 'Architect testimonial',
-          },
-        },
-      ]}
-    />
-
-    <!-- FAQs Section with Dockit Accordions ******************* -->
-
-    <section class="dockit-section relative">
+    <Fragment slot="bg">
       <div
-        class="absolute inset-0 bg-gradient-to-b from-transparent via-orange-50/20 to-transparent dark:via-orange-950/10"
+        class="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-purple-50/50 dark:from-orange-950/10 dark:via-transparent dark:to-purple-950/10"
       >
       </div>
-      <div class="dockit-container relative">
-        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-          <h2 class="section-title mb-4">Common questions</h2>
-        </div>
+    </Fragment>
+  </Content>
 
-        <div class="max-w-4xl mx-auto">
-          <Accordion
-            question="What makes Robrix different from other Matrix clients?"
-            answer="Robrix is built from the ground up in Rust with the Makepad UI framework, enabling true native performance on 7+ platforms from a single codebase. Most Matrix clients target web or a single platform."
-            open={true}
-          />
+  <!-- Getting Started with Tabs ***************** -->
 
-          <Accordion
-            question="Do I need a Matrix account?"
-            answer="Yes, you need a Matrix account to use Robrix. You can create a free account on matrix.org or any other Matrix homeserver. Robrix supports both username/password and SSO authentication."
-          />
-
-          <Accordion
-            question="Is my data secure?"
-            answer="Yes! Robrix supports Matrix's end-to-end encryption (E2EE) protocol, ensuring your messages can only be read by you and your intended recipients. All encryption happens on your device."
-          />
-
-          <Accordion
-            question="Can I contribute to development?"
-            answer="Absolutely! Robrix is open source under the MIT license. Check out the GitHub repository for contribution guidelines, or join the Project Robius community to get involved."
-          />
-        </div>
+  <section id="getting-started" class="dockit-section relative">
+    <div class="absolute inset-0 bg-gray-200/50 dark:bg-slate-800/50 backdrop-blur-sm -z-10"></div>
+    <div class="dockit-container">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <h2 class="section-title mb-4">
+          Get started quickly <span class="text-muted">in just 3 simple steps</span>
+        </h2>
+        <p class="section-description max-w-3xl mx-auto">From clone to chat in minutes</p>
       </div>
-    </section>
 
-    <!-- CallToAction Widget *********** -->
+      <Tabs>
+        <TabItem
+          title="Install Rust"
+          subtitle="Download and install Rust toolchain from rust-lang.org"
+          number={1}
+          icon="🦀"
+        >
+          <div class="prose dark:prose-invert max-w-none">
+            <h3 class="text-2xl font-bold mb-4">Step 1: Install Rust</h3>
+            <p class="text-lg mb-4">
+              Robrix requires <strong>Rust 1.70 or later</strong>. Visit <a
+                href="https://www.rust-lang.org/"
+                target="_blank"
+                class="text-dockit-primary hover:underline">rust-lang.org</a
+              > to download and install the latest version.
+            </p>
+            <div class="not-prose bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 relative">
+              <code
+                class="text-sm text-gray-300 block pr-12"
+                data-code="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+              >
+                curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+              </code>
+              <button
+                class="copy-btn absolute top-2 right-2 p-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+                aria-label="Copy code"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <p class="mt-4 text-sm text-gray-400">After installation, verify your Rust version:</p>
+            <div class="not-prose bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 mt-2 relative">
+              <code class="text-sm text-gray-300 block pr-12" data-code="rustc --version"> rustc --version </code>
+              <button
+                class="copy-btn absolute top-2 right-2 p-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+                aria-label="Copy code"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </TabItem>
 
-    <CallToAction
-      title="Start building with Robrix today"
-      subtitle="Join the growing community of developers building the future of decentralized communication"
-      actions={[
-        {
-          variant: 'primary',
-          text: 'Get Started',
-          href: 'https://github.com/project-robius/robrix',
-          icon: 'tabler:brand-github',
-        },
-        {
-          text: 'Join Community',
-          href: 'https://matrix.to/#/#robius:matrix.org',
-          icon: 'tabler:messages',
-        },
-      ]}
-    />
+        <TabItem
+          title="Clone Repository"
+          subtitle="Clone the Robrix repository and install dependencies"
+          number={2}
+          icon="📦"
+        >
+          <div class="prose dark:prose-invert max-w-none">
+            <h3 class="text-2xl font-bold mb-4">Step 2: Clone Repository</h3>
+            <p class="text-lg mb-4">
+              Clone the <a
+                href="https://github.com/project-robius/robrix"
+                target="_blank"
+                class="text-dockit-primary hover:underline">Robrix repository</a
+              > from GitHub and install platform-specific dependencies.
+            </p>
+            <div class="not-prose bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 relative mb-2">
+              <code
+                class="text-sm text-gray-300 block pr-12"
+                data-code="git clone https://github.com/project-robius/robrix.git"
+              >
+                git clone https://github.com/project-robius/robrix.git
+              </code>
+              <button
+                class="copy-btn absolute top-2 right-2 p-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+                aria-label="Copy code"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="not-prose bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 relative">
+              <code class="text-sm text-gray-300 block pr-12" data-code="cd robrix"> cd robrix </code>
+              <button
+                class="copy-btn absolute top-2 right-2 p-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+                aria-label="Copy code"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <p class="mt-4 text-sm text-gray-400">Install platform dependencies (varies by OS):</p>
+            <ul class="mt-2 space-y-2">
+              <li><strong>macOS:</strong> Xcode Command Line Tools</li>
+              <li><strong>Linux:</strong> Build essentials, OpenSSL, and required libraries</li>
+              <li><strong>Windows:</strong> Visual Studio Build Tools</li>
+            </ul>
+          </div>
+        </TabItem>
+
+        <TabItem title="Build & Run" subtitle="Use cargo-makepad to build and launch the app" number={3} icon="🚀">
+          <div class="prose dark:prose-invert max-w-none">
+            <h3 class="text-2xl font-bold mb-4">Step 3: Build & Run</h3>
+            <p class="text-lg mb-4">
+              Use <strong>cargo-makepad</strong> to build Robrix for your platform. Then launch the app and sign in with
+              your Matrix account.
+            </p>
+            <div class="not-prose bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 relative mb-2">
+              <code class="text-sm text-gray-300 block pr-12" data-code="cargo install cargo-makepad">
+                cargo install cargo-makepad
+              </code>
+              <button
+                class="copy-btn absolute top-2 right-2 p-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+                aria-label="Copy code"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="not-prose bg-gray-900 dark:bg-gray-950 p-4 rounded-lg border border-gray-800 relative">
+              <code class="text-sm text-gray-300 block pr-12" data-code="cargo makepad run"> cargo makepad run </code>
+              <button
+                class="copy-btn absolute top-2 right-2 p-2 rounded bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+                aria-label="Copy code"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <p class="mt-4 text-sm text-gray-400">On first launch, you'll be prompted to:</p>
+            <ul class="mt-2 space-y-2">
+              <li>✓ Enter your Matrix homeserver URL (e.g., matrix.org)</li>
+              <li>✓ Sign in with your username and password</li>
+              <li>✓ Verify your device for end-to-end encryption</li>
+            </ul>
+          </div>
+        </TabItem>
+      </Tabs>
+    </div>
   </section>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="What developers are saying"
+    subtitle="Robrix is pushing the boundaries of cross-platform development"
+    testimonials={[
+      {
+        testimonial: `Robrix demonstrates the true potential of Rust for building production-ready cross-platform applications. The Makepad integration is brilliant.`,
+        name: 'Open Source Developer',
+        job: 'Matrix Community',
+        image: {
+          src: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+          alt: 'Developer testimonial',
+        },
+      },
+      {
+        testimonial: `Finally, a Matrix client that feels native on every platform. The performance is exceptional and the codebase is clean.`,
+        name: 'Platform Engineer',
+        job: 'Tech Startup',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+          alt: 'Engineer testimonial',
+        },
+      },
+      {
+        testimonial: `Project Robius is showing us the future of UI frameworks. Robrix is a fantastic showcase of what's possible.`,
+        name: 'Software Architect',
+        job: 'Enterprise Company',
+        image: {
+          src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+          alt: 'Architect testimonial',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Section with Dockit Accordions ******************* -->
+
+  <section id="faq" class="dockit-section relative">
+    <div class="absolute inset-0 bg-gray-200/50 dark:bg-slate-800/50 backdrop-blur-sm -z-10"></div>
+    <div class="dockit-container relative">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <h2 class="section-title mb-4">Common questions</h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <Accordion
+          question="What makes Robrix different from other Matrix clients?"
+          answer="Robrix is built from the ground up in Rust with the Makepad UI framework, enabling true native performance on 7+ platforms from a single codebase. Most Matrix clients target web or a single platform."
+          open={true}
+        />
+
+        <Accordion
+          question="Do I need a Matrix account?"
+          answer="Yes, you need a Matrix account to use Robrix. You can create a free account on matrix.org or any other Matrix homeserver. Robrix supports both username/password and SSO authentication."
+        />
+
+        <Accordion
+          question="Is my data secure?"
+          answer="Yes! Robrix supports Matrix's end-to-end encryption (E2EE) protocol, ensuring your messages can only be read by you and your intended recipients. All encryption happens on your device."
+        />
+
+        <Accordion
+          question="Can I contribute to development?"
+          answer="Absolutely! Robrix is open source under the MIT license. Check out the GitHub repository for contribution guidelines, or join the Project Robius community to get involved."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Start building with Robrix today"
+    subtitle="Join the growing community of developers building the future of decentralized communication"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: 'https://github.com/project-robius/robrix',
+        icon: 'tabler:brand-github',
+      },
+      {
+        text: 'Join Community',
+        href: 'https://matrix.to/#/#robius:matrix.org',
+        icon: 'tabler:messages',
+      },
+    ]}
+  />
 </Layout>
+
+<script>
+  // Use event delegation since tabs are dynamically rendered
+  document.addEventListener('click', async (e) => {
+    const target = e.target as HTMLElement;
+    const button = target.closest('.copy-btn') as HTMLButtonElement;
+
+    if (!button) return;
+
+    const codeBlock = button.previousElementSibling as HTMLElement;
+    if (!codeBlock) return;
+
+    // Get text from data-code attribute
+    const text = codeBlock.getAttribute('data-code');
+    if (!text) return;
+
+    try {
+      await navigator.clipboard.writeText(text);
+
+      // Show feedback
+      const originalHTML = button.innerHTML;
+      button.innerHTML = `
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      `;
+      button.classList.add('!text-green-400');
+
+      setTimeout(() => {
+        button.innerHTML = originalHTML;
+        button.classList.remove('!text-green-400');
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  });
+</script>

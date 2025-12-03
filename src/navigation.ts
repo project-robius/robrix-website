@@ -7,6 +7,18 @@ export const headerData = {
       href: getPermalink('/#features'),
     },
     {
+      text: 'Technology',
+      href: getPermalink('/#technology'),
+    },
+    {
+      text: 'Getting Started',
+      href: getPermalink('/#getting-started'),
+    },
+    {
+      text: 'FAQ',
+      href: getPermalink('/#faq'),
+    },
+    {
       text: 'Documentation',
       href: 'https://github.com/project-robius/robrix#readme',
       target: '_blank',
