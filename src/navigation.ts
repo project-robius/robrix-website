@@ -3,12 +3,12 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Features',
-      href: getPermalink('/#features'),
-    },
-    {
       text: 'Technology',
       href: getPermalink('/#technology'),
+    },
+    {
+      text: 'Features',
+      href: getPermalink('/#features'),
     },
     {
       text: 'Getting Started',
@@ -19,9 +19,8 @@ export const headerData = {
       href: getPermalink('/#faq'),
     },
     {
-      text: 'Documentation',
-      href: 'https://github.com/project-robius/robrix#readme',
-      target: '_blank',
+      text: 'Presentations',
+      href: getPermalink('/presentations'),
     },
   ],
   actions: [{ variant: 'primary', text: 'GitHub', href: 'https://github.com/project-robius/robrix', icon: 'tabler:brand-github', target: '_blank' }],
@@ -47,7 +46,7 @@ export const footerData = {
     {
       title: 'Resources',
       links: [
-        { text: 'Documentation', href: 'https://github.com/project-robius/robrix#readme' },
+        { text: 'Presentations', href: getPermalink('/presentations') },
         { text: 'License (MIT)', href: 'https://github.com/project-robius/robrix/blob/main/LICENSE' },
       ],
     },

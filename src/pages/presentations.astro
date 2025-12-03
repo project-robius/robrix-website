@@ -1,0 +1,250 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+// Dockit components
+import Grid from '~/components/dockit/Grid.astro';
+import Card from '~/components/dockit/Card.astro';
+
+const metadata = {
+  title: 'Presentations & Videos — Robrix',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero>
+    <Fragment slot="title">
+      Presentations & Videos
+    </Fragment>
+    <Fragment slot="subtitle">
+      Learn about Robrix and Project Robius through our conference talks, demos, and technical presentations
+    </Fragment>
+  </Hero>
+
+  <!-- Videos Section -->
+  <section class="dockit-section relative">
+    <div class="absolute inset-0 bg-gray-200/50 dark:bg-slate-800/50 backdrop-blur-sm -z-10"></div>
+    <div class="dockit-container">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <p class="text-base font-semibold tracking-wide uppercase" style="color: var(--dockit-primary);">
+          Watch & Learn
+        </p>
+        <h2 class="section-title mb-4">Conference Talks & Demos</h2>
+        <p class="section-description max-w-3xl mx-auto">
+          Watch our presentations from RustNL and GOSIM conferences showcasing Robrix development and Project Robius vision
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- RustNL 2024 Video -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-700">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/Dg4hlfettn8"
+              title="RustNL 2024: Project Robius Status Update & Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">RustNL 2024</h3>
+            <p class="text-sm text-muted mb-2">May 8, 2024</p>
+            <p class="text-muted">Project Robius's first status update and demo showcasing cross-platform capabilities</p>
+          </div>
+        </div>
+
+        <!-- GOSIM Europe 2024 Video -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-700">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/P8RGF942A5g"
+              title="GOSIM Europe 2024: Robrix - A Matrix Chat Client and More"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">GOSIM Europe 2024</h3>
+            <p class="text-sm text-muted mb-2">May 6, 2024</p>
+            <p class="text-muted">Deep dive into Robrix as a Matrix chat client and the broader Project Robius ecosystem</p>
+          </div>
+        </div>
+
+        <!-- GOSIM 2023 Video -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="aspect-video bg-gray-200 dark:bg-gray-700">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/8JfOXfmwotQ?start=6802"
+              title="GOSIM 2023: Introducing Project Robius Vision"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">GOSIM 2023</h3>
+            <p class="text-sm text-muted mb-2">2023</p>
+            <p class="text-muted">The original vision for multi-platform app development in Rust with Project Robius</p>
+            <a
+              href="https://www.bilibili.com/video/BV1AN4y1Z7vs/"
+              target="_blank"
+              class="text-sm text-primary hover:underline mt-2 inline-block"
+            >
+              Watch on Bilibili →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Presentations Section -->
+  <section class="dockit-section">
+    <div class="dockit-container">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <p class="text-base font-semibold tracking-wide uppercase" style="color: var(--dockit-primary);">
+          Download Slides
+        </p>
+        <h2 class="section-title mb-4">Presentation Materials</h2>
+        <p class="section-description max-w-3xl mx-auto">
+          Download presentation slides from our conference talks
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <!-- RustNL 2024 Presentation -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">Project Robius's First Status Update & Demo</h3>
+              <p class="text-sm text-muted mb-1">RustNL 2024 • May 8, 2024</p>
+              <p class="text-muted">Comprehensive status update on Project Robius development with live demonstrations</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://github.com/project-robius/files/raw/3ac0a9d2e9f3c78ea51b4875abe02d288fa3685f/RustNL%202024%20and%20GOSIM%20Europe%202024/Robius%20Talk%20RustNL%20May%208,%202024.pptx"
+                target="_blank"
+                class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-center whitespace-nowrap"
+              >
+                PowerPoint (19MB)
+              </a>
+              <a
+                href="https://github.com/project-robius/files/blob/3ac0a9d2e9f3c78ea51b4875abe02d288fa3685f/RustNL%202024%20and%20GOSIM%20Europe%202024/Robius%20Talk%20RustNL%20May%208%2C%202024.pdf"
+                target="_blank"
+                class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors text-center whitespace-nowrap"
+              >
+                PDF (12MB)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GOSIM Europe 2024 Presentation -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">Robrix: A Matrix Chat Client and More</h3>
+              <p class="text-sm text-muted mb-1">GOSIM Europe 2024 • May 6, 2024</p>
+              <p class="text-muted">Technical deep dive into Robrix architecture and Matrix protocol integration</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://github.com/project-robius/files/raw/3ac0a9d2e9f3c78ea51b4875abe02d288fa3685f/RustNL%202024%20and%20GOSIM%20Europe%202024/Robrix%20Talk%20GOSIM%20Europe%20May%206,%202024.pptx"
+                target="_blank"
+                class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-center whitespace-nowrap"
+              >
+                PowerPoint (22MB)
+              </a>
+              <a
+                href="https://github.com/project-robius/files/blob/3ac0a9d2e9f3c78ea51b4875abe02d288fa3685f/RustNL%202024%20and%20GOSIM%20Europe%202024/Robrix%20Talk%20GOSIM%20Europe%20May%206,%202024.pdf"
+                target="_blank"
+                class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors text-center whitespace-nowrap"
+              >
+                PDF (16MB)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GOSIM 2023 Presentation -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">Introducing Our Vision for Project Robius</h3>
+              <p class="text-sm text-muted mb-1">GOSIM 2023</p>
+              <p class="text-muted">The foundational vision for multi-platform app development in Rust</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://github.com/project-robius/files/raw/041e980ec1d14bf325f1fb2ba743f8ed142a70cb/Robius%20-%20A%20Vision%20for%20Multi-platform%20App%20Development%20in%20Rust.pptx"
+                target="_blank"
+                class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-center whitespace-nowrap"
+              >
+                PowerPoint (18MB)
+              </a>
+              <a
+                href="https://github.com/project-robius/files/blob/041e980ec1d14bf325f1fb2ba743f8ed142a70cb/Robius%20-%20A%20Vision%20for%20Multi-platform%20App%20Development%20in%20Rust.pdf"
+                target="_blank"
+                class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors text-center whitespace-nowrap"
+              >
+                PDF (15MB)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Resources Section -->
+  <section class="dockit-section relative">
+    <div class="absolute inset-0 bg-gray-200/50 dark:bg-slate-800/50 backdrop-blur-sm -z-10"></div>
+    <div class="dockit-container">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <h2 class="section-title mb-4">Additional Resources</h2>
+        <p class="section-description max-w-3xl mx-auto">
+          Explore more about Project Robius and the broader ecosystem
+        </p>
+      </div>
+
+      <Grid columns={3}>
+        <Card icon="tabler:book" title="Documentation" iconColor="#7BBAFF" size="small">
+          Visit the official Robrix documentation on GitHub to learn more about building and using the app.
+          <div class="mt-4">
+            <a
+              href="https://github.com/project-robius/robrix#readme"
+              target="_blank"
+              class="text-primary hover:underline"
+            >
+              Read the docs →
+            </a>
+          </div>
+        </Card>
+
+        <Card icon="tabler:brand-github" title="GitHub Repository" iconColor="#D76D77" size="small">
+          Explore the source code, contribute, and stay updated with the latest development progress.
+          <div class="mt-4">
+            <a href="https://github.com/project-robius/robrix" target="_blank" class="text-primary hover:underline">
+              View on GitHub →
+            </a>
+          </div>
+        </Card>
+
+        <Card icon="tabler:world" title="Project Robius" iconColor="#FFD97B" size="small">
+          Learn more about the broader Project Robius ecosystem and vision for multi-platform Rust development.
+          <div class="mt-4">
+            <a href="https://robius.rs/" target="_blank" class="text-primary hover:underline">
+              Visit robius.rs →
+            </a>
+          </div>
+        </Card>
+      </Grid>
+    </div>
+  </section>
+</Layout>
