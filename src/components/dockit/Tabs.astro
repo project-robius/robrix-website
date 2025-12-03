@@ -56,25 +56,11 @@
 </style>
 
 <script>
-	class DockitTabs {
-		private container: HTMLElement | null;
-		private tabsItemsContainer: HTMLElement | null;
-		private tabsNavContainer: HTMLElement | null;
-		private tabsContentContainer: HTMLElement | null;
-		private activeTabNumber: number = 1;
-
-		constructor() {
-			this.container = document.querySelector('.dockit-tabs-container');
-			this.tabsItemsContainer = document.querySelector('.dockit-tabs-items');
-			this.tabsNavContainer = document.querySelector('.dockit-tabs-nav');
-			this.tabsContentContainer = document.querySelector('.dockit-tabs-content');
-
-			this.injectCSS();
-			this.init();
-		}
-
-		private injectCSS(): void {
+	function initDockitTabs() {
+		// Inject CSS only once
+		if (!document.getElementById('dockit-tabs-styles')) {
 			const style = document.createElement('style');
+			style.id = 'dockit-tabs-styles';
 			style.textContent = `
 				.dockit-tabs-nav .dockit-tab-nav {
 					flex: 1;
@@ -192,84 +178,97 @@
 			document.head.appendChild(style);
 		}
 
-		private init(): void {
-			if (!this.container || !this.tabsItemsContainer) return;
-			setTimeout(() => this.setupTabs(), 100);
-		}
+		// Initialize all tab containers
+		const containers = document.querySelectorAll('.dockit-tabs-container');
 
-		private setupTabs(): void {
-			const tabItems = this.tabsItemsContainer?.querySelectorAll('.dockit-tab-item');
-			if (!tabItems || tabItems.length === 0) return;
+		containers.forEach((container) => {
+			const tabsItemsContainer = container.querySelector('.dockit-tabs-items');
+			const tabsNavContainer = container.querySelector('.dockit-tabs-nav');
+			const tabsContentContainer = container.querySelector('.dockit-tabs-content');
 
+			if (!tabsItemsContainer || !tabsNavContainer || !tabsContentContainer) return;
+
+			// Skip if already initialized
+			if (tabsNavContainer.children.length > 0) return;
+
+			const tabItems = tabsItemsContainer.querySelectorAll('.dockit-tab-item');
+			if (tabItems.length === 0) return;
+
+			let activeTabNumber = 1;
+
+			// Setup tabs
 			tabItems.forEach((item, index) => {
 				const navElement = item.querySelector('.dockit-tab-nav');
 				const contentElement = item.querySelector('.dockit-tab-content');
 
-				if (navElement && contentElement && this.tabsNavContainer && this.tabsContentContainer) {
-					const navClone = navElement.cloneNode(true) as Element;
-					const contentClone = contentElement.cloneNode(true) as Element;
+				if (navElement && contentElement) {
+					const navClone = navElement.cloneNode(true);
+					const contentClone = contentElement.cloneNode(true);
 
 					const isActive = index === 0;
 					navClone.setAttribute('data-active', isActive.toString());
 					contentClone.setAttribute('data-active', isActive.toString());
 
-					this.tabsNavContainer.appendChild(navClone);
-					this.tabsContentContainer.appendChild(contentClone);
+					tabsNavContainer.appendChild(navClone);
+					tabsContentContainer.appendChild(contentClone);
 				}
 			});
 
-			setTimeout(() => this.bindEvents(), 100);
-		}
-
-		private bindEvents(): void {
-			if (!this.tabsNavContainer || !this.tabsContentContainer) return;
-
-			const tabButtons = this.tabsNavContainer.querySelectorAll('.tab-button');
+			// Bind events
+			const tabButtons = tabsNavContainer.querySelectorAll('.tab-button');
 			tabButtons.forEach((button) => {
 				button.addEventListener('click', (e) => {
 					e.preventDefault();
-					const tabNumber = parseInt((button as HTMLElement).dataset.tab || '1');
-					this.switchTab(tabNumber);
+					const tabNumber = parseInt(button.dataset.tab || '1');
+
+					if (tabNumber === activeTabNumber) return;
+
+					// Deactivate all tabs
+					tabsNavContainer.querySelectorAll('.dockit-tab-nav').forEach((nav) => {
+						nav.setAttribute('data-active', 'false');
+					});
+
+					tabsContentContainer.querySelectorAll('.dockit-tab-content').forEach((content) => {
+						content.setAttribute('data-active', 'false');
+						content.style.display = 'none';
+					});
+
+					// Activate selected tab
+					const targetNav = tabsNavContainer
+						.querySelector(`[data-tab="${tabNumber}"]`)
+						?.closest('.dockit-tab-nav');
+					if (targetNav) {
+						targetNav.setAttribute('data-active', 'true');
+					}
+
+					const targetContent = tabsContentContainer.querySelector(
+						`[data-panel="${tabNumber}"]`
+					);
+					if (targetContent) {
+						targetContent.style.display = 'flex';
+						targetContent.setAttribute('data-active', 'true');
+					}
+
+					activeTabNumber = tabNumber;
 				});
 			});
-		}
-
-		private switchTab(tabNumber: number): void {
-			if (tabNumber === this.activeTabNumber) return;
-
-			// Deactivate all tabs
-			this.tabsNavContainer?.querySelectorAll('.dockit-tab-nav').forEach((nav) => {
-				nav.setAttribute('data-active', 'false');
-			});
-
-			this.tabsContentContainer?.querySelectorAll('.dockit-tab-content').forEach((content) => {
-				content.setAttribute('data-active', 'false');
-				(content as HTMLElement).style.display = 'none';
-			});
-
-			// Activate selected tab
-			const targetNav = this.tabsNavContainer
-				?.querySelector(`[data-tab="${tabNumber}"]`)
-				?.closest('.dockit-tab-nav');
-			if (targetNav) {
-				targetNav.setAttribute('data-active', 'true');
-			}
-
-			const targetContent = this.tabsContentContainer?.querySelector(
-				`[data-panel="${tabNumber}"]`
-			) as HTMLElement;
-			if (targetContent) {
-				targetContent.style.display = 'flex';
-				targetContent.setAttribute('data-active', 'true');
-			}
-
-			this.activeTabNumber = tabNumber;
-		}
+		});
 	}
 
+	// Initialize on load
 	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', () => new DockitTabs());
+		document.addEventListener('DOMContentLoaded', initDockitTabs);
 	} else {
-		new DockitTabs();
+		initDockitTabs();
 	}
+
+	// Re-initialize on page show (handles bfcache)
+	window.addEventListener('pageshow', () => {
+		initDockitTabs();
+	});
+
+	// Re-initialize after Astro page transitions (if enabled in the future)
+	document.addEventListener('astro:page-load', () => {
+		initDockitTabs();
+	});
 </script>
