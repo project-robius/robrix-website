@@ -47,6 +47,7 @@ export const footerData = {
       title: 'Resources',
       links: [
         { text: 'Presentations', href: getPermalink('/presentations') },
+        { text: 'Privacy Policy', href: getPermalink('/privacy') },
         { text: 'License (MIT)', href: 'https://github.com/project-robius/robrix/blob/main/LICENSE' },
       ],
     },
