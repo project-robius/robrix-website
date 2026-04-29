@@ -3,7 +3,7 @@ title: "Privacy Policy"
 layout: "~/layouts/MarkdownLayout.astro"
 ---
 
-*Last updated: April 28, 2026*
+*Last updated: April 29, 2026*
 
 Robrix is an open-source [Matrix](https://matrix.org) chat client developed by [Project Robius](https://github.com/project-robius) and published under the [GOSIM Foundation](https://gosim.org). The purpose of this page is to explain, in plain English, what happens to your data when you use Robrix.
 
@@ -34,6 +34,9 @@ These behaviors are properties of the Matrix protocol and the rooms you join, no
 Matrix rooms can be end-to-end encrypted, meaning that the client (e.g., Robrix) encrypts your messages on your device before that message is sent off of the device, and decrypts those messages on the recipients' devices. Thus, E2EE messages cannot be read by your own homeserver, anyone else's homeserver, anyone on the network in between, and the Robrix developers/maintainers. Nobody on the Project Robius team has, or could ever obtain, access to your encrypted message content.
 
 Some metadata is still visible to the homeservers involved: who is in a room, when messages are sent, message sizes, and so on. Again, that is a property of the Matrix protocol, not Robrix.
+
+The encryption itself is implemented by the [matrix-rust-sdk](https://github.com/matrix-org/matrix-rust-sdk), which uses the [Vodozemac](https://github.com/matrix-org/vodozemac) library, a standard implementation of the Olm and Megolm protocols (Curve25519 and Ed25519 keypairs, AES-256-CTR for message bodies).
+Robrix doesn't implement its own crypto stack nor do we modify it in any way. Thus, key backup, cross-signing, device verification, and account recovery are handled through the [standard Matrix mechanisms documented here](https://matrix.org/docs/matrix-concepts/end-to-end-encryption/).
 
 If you delete (i.e., "redact") a message, Robrix sends a redaction request up to your homeserver, which forwards it to the rest of the room. When Robrix receives redaction events from your homeserver, either for your messages or anyone else's messages, it removes that content from its local cache. Redactions clear the message body, your display name at the time, and any attached media, but your username remains visible as the original sender. Remote homeservers, bridged services, and other Matrix clients are not guaranteed to honor a redaction request, so copies may persist on devices that have already received the message.
 
@@ -87,6 +90,19 @@ Robrix isn't directed at children, and we don't intentionally process anyone's d
 Privacy laws like the GDPR and CCPA give you rights over personal data — to access it, correct it, delete it, port it, and object to its processing. Because Robrix doesn't process or hold your data, there is nothing on our side to access, correct, or delete. To exercise those rights over your messages and account, please contact the administrator of the homeserver you signed into.
 
 If you want to deactivate or delete a Matrix account, that must also be done through your homeserver, not through Robrix.
+
+### Who is the data controller?
+
+For the purposes of the GDPR (and similar laws elsewhere), Project Robius and the GOSIM Foundation are **not** a data controller or processor of your Matrix communications.
+We don't decide the purposes or means of processing your messages, profile, presence, or any other personal data, because we simply don't process any of it, we only relay it to/from your homeserver as needed. The data controller for your Matrix usage is the administrator of the homeserver you signed into, as well as any other homeservers that data is federated onto as part of the Matrix protocol. Their privacy policies govern that data, and any data subject rights requests must be directed to them.
+
+### Right to lodge a complaint
+
+If you are in the European Union, the United Kingdom, or another jurisdiction with a data protection authority, you have the right to lodge a complaint with your national supervisory authority about how your personal data is being handled. For Matrix-related concerns, the relevant authority is typically the one that oversees your homeserver administrator, since they are the data controller. A list of EU supervisory authorities is available [here](https://www.edpb.europa.eu/about-edpb/about-edpb/members_en).
+
+### Responsible entity
+
+Robrix is developed by Project Robius and published under the GOSIM Foundation, both of which are open-source organizations. For privacy or data-related correspondence concerning the Robrix app itself, see our contact information below.
 
 ## Open source
 
