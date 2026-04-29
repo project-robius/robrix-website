@@ -59,7 +59,7 @@ Logging out of Robrix clears most of this on most platforms, and uninstalling th
 - **Identity servers.** Robrix doesn't query an identity server by default. Discovery of users by email address or phone number is not supported, so your contacts are never accessed or uploaded anywhere.
 - **Single sign-on (SSO).** If your homeserver supports SSO and you choose to log in that way, Robrix opens the SSO provider's login page (for example, Google, GitHub, or your organization's identity provider) so you can authenticate directly with them. That provider --- not Robrix or your homeserver --- handles the login and may log it under their own privacy policy. Robrix only receives the resulting access token from your homeserver.
 - **Push notifications.** Robrix doesn't currently route notifications through Apple, Google, or any other push gateway. Notifications, where supported, are generated locally from your active Matrix sync.
-- **Crash reports.** Robrix doesn't send crash reports anywhere. Any diagnostic logs the app writes stay on your device. If you encounter a bug, you are encouraged to voluntarily share those with the Robrix development team, but that is completely optional.
+- **Crash reports.** Robrix doesn't send crash reports anywhere. Any diagnostic logs the app writes stay on your device. If you encounter a bug, you are encouraged to voluntarily share those logs with the Robrix development team by [filing an issue on GitHub](https://github.com/project-robius/robrix/issues/new), but that is optional.
 
 If any of this changes in a future version, we'll update this page.
 
@@ -98,4 +98,4 @@ If we ever change how Robrix handles data, we'll update this page.
 
 ## Contact
 
-Questions or concerns about Robrix or our privacy policy? You can either open an issue at [github.com/project-robius/robrix](https://github.com/project-robius/robrix/issues), or for more private queries, email us at [it@gosim.org](mailto:it@gosim.org).
+Questions or concerns about Robrix or our privacy policy? You can either open an issue at [github.com/project-robius/robrix](https://github.com/project-robius/robrix/issues), or for more private queries, email us at: `it [at] gosim.org`.
